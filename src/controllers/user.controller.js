@@ -15,7 +15,8 @@ const registerUser = async (req, res) => {
             return res.status(409).json({ message: 'El email ya está registrado.' });
         }
         const salt = await bcrypt.genSalt(10);
-        const hashedPassword = await bcrypt.hash(password, salt);
+        const hashedPassword = password;
+        //const hashedPassword = await bcrypt.hash(password, salt);
         const insertUserQuery = `
             INSERT INTO ${SCHEMA}.users (name, email, password) 
             VALUES ($1, $2, $3) 
@@ -51,3 +52,4 @@ module.exports = {
     registerUser,
     loginUser
 };
+
