@@ -3,57 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas (Task Manager)</title>
+    <title>BAC Credomatic | Banca en Línea</title> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Gestor de Tareas</h1>
+        <div class="logo">BAC Credomatic</div> 
         <div id="auth-controls">
-            <button id="logout-btn" style="display: none;">Cerrar Sesión</button>
+            <button id="logout-btn" style="display: none;">Cerrar Sesión Segura</button>
         </div>
     </header>
 
     <main>
-        <section id="auth-section">
-            <h2>Acceso</h2>
+        <section id="auth-section" class="bank-login-section"> 
+            <h2>Banca en Línea</h2>
             <div id="login-container">
-                <h3>Iniciar Sesión</h3>
+                <h3>Ingresar a su cuenta</h3>
                 <form id="login-form">
-                    <input type="email" id="login-email" placeholder="Email" required><br>
+                    <input type="text" id="login-email" placeholder="Usuario (Email o DNI)" required><br>
                     <input type="password" id="login-password" placeholder="Contraseña" required><br>
-                    <button type="submit">Ingresar</button>
+                    <button type="submit" class="bank-button">Ingresar</button>
+                    <p class="bank-link">¿No puede ingresar? <a href="#" id="show-register">Regístrese</a></p>
                 </form>
-                <p>¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
             </div>
 
             <div id="register-container" style="display: none;">
-                <h3>Registro</h3>
+                <h3>Crear Nuevo Usuario</h3>
                 <form id="register-form">
-                    <input type="text" id="register-name" placeholder="Nombre" required><br>
-                    <input type="email" id="register-email" placeholder="Email" required><br>
-                    <input type="password" id="register-password" placeholder="Contraseña" required><br>
-                    <button type="submit">Registrar</button>
+                    <input type="text" id="register-name" placeholder="Nombre Completo" required><br>
+                    <input type="email" id="register-email" placeholder="Email (Será su Usuario)" required><br>
+                    <input type="password" id="register-password" placeholder="Contraseña Segura" required><br>
+                    <button type="submit" class="bank-button">Crear Cuenta</button>
                 </form>
-                <p>¿Ya tienes cuenta? <a href="#" id="show-login">Iniciar Sesión</a></p>
+                <p class="bank-link">¿Ya es cliente? <a href="#" id="show-login">Iniciar Sesión</a></p>
             </div>
         </section>
 
         <section id="tasks-section" style="display: none;">
             
-            <div id="task-creation">
-                <h3>Crear Nueva Tarea (Punto 3)</h3>
+            <div id="task-creation" class="red-border">
+                <h3>Nueva Transacción (Punto 3)</h3>
                 <form id="create-task-form">
-                    <input type="text" id="task-title" placeholder="Título de la tarea" required><br>
-                    <textarea id="task-description" placeholder="Descripción (Opcional)"></textarea><br>
-                    <button type="submit">Guardar Tarea</button>
+                    <input type="text" id="task-title" placeholder="Concepto de la Transacción" required><br>
+                    <textarea id="task-description" placeholder="Monto o Detalles"></textarea><br>
+                    <button type="submit" class="red-button">Realizar Transacción</button>
                 </form>
             </div>
             
-            <h3>Mis Tareas (Punto 4)</h3>
+            <h3>Movimientos Recientes (Punto 4)</h3>
             <div id="tasks-list">
-                <p id="no-tasks-message" style="text-align: center; color: #888;">No tienes tareas aún.</p>
+                <p id="no-tasks-message" style="text-align: center; color: #888;">No tienes movimientos recientes.</p>
             </div>
         </section>
     </main>

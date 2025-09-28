@@ -10,12 +10,19 @@ body {
     min-height: 100vh;
 }
 header {
-    background-color: #007bff;
+    /* Color principal de BAC: Azul */
+    background-color: #D9001D; 
     color: white;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.logo {
+    /* Simulación de logo con texto en negrita */
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
 }
 main {
     padding: 20px;
@@ -28,28 +35,68 @@ section {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra más fuerte */
 }
+
+/* Estilo para la sección de LOGIN (más limpia, como un pop-up de banco) */
+.bank-login-section {
+    max-width: 450px;
+    margin: 40px auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.bank-login-section h2 {
+    color: #0073B7;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.bank-link a {
+    color: #0073B7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 input[type="text"], input[type="email"], input[type="password"], textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
-button {
-    background-color: #28a745;
+
+/* Botones principales (azules) */
+.bank-button {
+    background-color: #D9001D; /* Azul BAC */
     color: white;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 10px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
 }
-button:hover {
-    background-color: #218838;
+.bank-button:hover {
+    background-color: #D9001D;
 }
+
+/* Botón de Realizar Transacción (rojo) */
+.red-button {
+    background-color: #D9001D; /* Rojo BAC */
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.red-button:hover {
+    background-color: #a80017;
+}
+
+/* Estilos de Tareas (para simular Movimientos) */
 .task-card {
     border: 1px solid #ddd;
     padding: 15px;
@@ -58,9 +105,31 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Fuente de tareas/movimientos */
+    font-family: 'Courier New', Courier, monospace; 
 }
-.status-pending { background-color: #ffeeba; }
-.status-in_progress { background-color: #d1ecf1; }
-.status-done { background-color: #d4edda; }
+
+/* Estilos de Status (simulando estado de transacciones) */
+.status-pending { background-color: #fff9e6; } /* Amarillo pálido */
+.status-in_progress { background-color: #e6f7ff; } /* Azul pálido */
+.status-done { 
+    background-color: #fce8e8; /* ROJO pálido (para transacciones completadas/procesadas) */
+    border-left: 5px solid #D9001D; /* Línea roja */
+}
 .task-info { flex-grow: 1; }
 .task-controls button { margin-left: 10px; }
+
+/* Botón de Cerrar Sesión Segura (Rojo) */
+#logout-btn {
+    background-color: #D9001D;
+    padding: 8px 12px;
+}
+#logout-btn:hover {
+    background-color: #a80017;
+}
+
+/* Borde rojo para la creación de tareas/transacciones */
+#task-creation.red-border {
+    border: 2px solid #D9001D;
+    padding: 20px;
+}
