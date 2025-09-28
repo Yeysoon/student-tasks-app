@@ -1,1 +1,63 @@
-d
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas (Task Manager)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestor de Tareas</h1>
+        <div id="auth-controls">
+            <button id="logout-btn" style="display: none;">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="auth-section">
+            <h2>Acceso</h2>
+            <div id="login-container">
+                <h3>Iniciar Sesión</h3>
+                <form id="login-form">
+                    <input type="email" id="login-email" placeholder="Email" required><br>
+                    <input type="password" id="login-password" placeholder="Contraseña" required><br>
+                    <button type="submit">Ingresar</button>
+                </form>
+                <p>¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
+            </div>
+
+            <div id="register-container" style="display: none;">
+                <h3>Registro</h3>
+                <form id="register-form">
+                    <input type="text" id="register-name" placeholder="Nombre" required><br>
+                    <input type="email" id="register-email" placeholder="Email" required><br>
+                    <input type="password" id="register-password" placeholder="Contraseña" required><br>
+                    <button type="submit">Registrar</button>
+                </form>
+                <p>¿Ya tienes cuenta? <a href="#" id="show-login">Iniciar Sesión</a></p>
+            </div>
+        </section>
+
+        <section id="tasks-section" style="display: none;">
+            
+            <div id="task-creation">
+                <h3>Crear Nueva Tarea (Punto 3)</h3>
+                <form id="create-task-form">
+                    <input type="text" id="task-title" placeholder="Título de la tarea" required><br>
+                    <textarea id="task-description" placeholder="Descripción (Opcional)"></textarea><br>
+                    <button type="submit">Guardar Tarea</button>
+                </form>
+            </div>
+            
+            <h3>Mis Tareas (Punto 4)</h3>
+            <div id="tasks-list">
+                <p id="no-tasks-message" style="text-align: center; color: #888;">No tienes tareas aún.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
