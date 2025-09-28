@@ -18,12 +18,30 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-.logo {
-    /* Simulación de logo con texto en negrita */
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
+/* Contenedor para alinear logo y título */
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;    /* Centra el contenido verticalmente */
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el espacio */
 }
+/* Estilo para el logo (imagen) */
+.bac-logo {
+    height: 35px; /* Tamaño del logo */
+    vertical-align: center;
+    /* FILTRO para hacer la imagen BLANCA (asumiendo que la imagen es oscura) */
+    filter: brightness(0) invert(1); 
+    margin-right: 15px; /* Espacio entre el logo y el texto */
+    text-align: center;
+}
+/* Estilo para el título al lado del logo */
+.bank-title {
+    font-size: 24px;
+    font-weight: normal; /* Menos agresivo que 'bold' */
+    color: white;
+    margin: 0;
+}
+
 main {
     padding: 20px;
     max-width: 900px;
@@ -35,7 +53,7 @@ section {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra más fuerte */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
 }
 
 /* Estilo para la sección de LOGIN (más limpia, como un pop-up de banco) */
@@ -55,6 +73,7 @@ section {
     color: #0073B7;
     text-decoration: none;
     font-weight: bold;
+    align-items: center;
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
@@ -105,16 +124,15 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Fuente de tareas/movimientos */
     font-family: 'Courier New', Courier, monospace; 
 }
 
 /* Estilos de Status (simulando estado de transacciones) */
-.status-pending { background-color: #fff9e6; } /* Amarillo pálido */
-.status-in_progress { background-color: #e6f7ff; } /* Azul pálido */
+.status-pending { background-color: #fff9e6; } 
+.status-in_progress { background-color: #e6f7ff; } 
 .status-done { 
-    background-color: #fce8e8; /* ROJO pálido (para transacciones completadas/procesadas) */
-    border-left: 5px solid #D9001D; /* Línea roja */
+    background-color: #fce8e8; 
+    border-left: 5px solid #D9001D; 
 }
 .task-info { flex-grow: 1; }
 .task-controls button { margin-left: 10px; }
