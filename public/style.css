@@ -28,16 +28,15 @@ header {
 /* Estilo para el logo (imagen) */
 .bac-logo {
     height: 35px; /* Tamaño del logo */
-    vertical-align: center;
+    vertical-align: middle;
     /* FILTRO para hacer la imagen BLANCA (asumiendo que la imagen es oscura) */
     filter: brightness(0) invert(1); 
     margin-right: 15px; /* Espacio entre el logo y el texto */
-    text-align: center;
 }
 /* Estilo para el título al lado del logo */
 .bank-title {
     font-size: 24px;
-    font-weight: normal; /* Menos agresivo que 'bold' */
+    font-weight: normal; 
     color: white;
     margin: 0;
 }
@@ -69,11 +68,25 @@ section {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
 }
+
+/* NUEVA REGLA: Centra el h3 "Ingresar a su cuenta" y "Crear Nuevo Usuario" */
+#login-container h3, #register-container h3 {
+    text-align: center;
+    color: #333; /* Color oscuro para el título del formulario */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* REGLA CORREGIDA: Centra el párrafo del enlace "¿No puede ingresar? Regístrese" */
+.bank-link {
+    text-align: center;
+    padding-top: 10px;
+}
+
 .bank-link a {
     color: #0073B7;
     text-decoration: none;
     font-weight: bold;
-    align-items: center;
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
@@ -87,7 +100,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 
 /* Botones principales (azules) */
 .bank-button {
-    background-color: #D9001D; /* Azul BAC */
+    background-color: #0073B7; /* Azul BAC */
     color: white;
     padding: 12px 15px;
     border: none;
@@ -98,7 +111,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     margin-bottom: 10px;
 }
 .bank-button:hover {
-    background-color: #D9001D;
+    background-color: #005f96;
 }
 
 /* Botón de Realizar Transacción (rojo) */
