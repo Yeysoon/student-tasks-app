@@ -37,7 +37,8 @@ const loginUser = async (req, res) => {
         const user = (await query(userQuery, [email])).rows[0];
         if (!user) return res.status(401).json({ message: 'Credenciales inválidas.' });
         
-        const isMatch = await bcrypt.compare(password, user.password);
+        const isMatch = (password === user.password);
+        //const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) return res.status(401).json({ message: 'Credenciales inválidas.' });
         
         const token = jwt.sign({ id: user.id, email: user.email }, process.env.SECRET_JWT, { expiresIn: '1h' });
